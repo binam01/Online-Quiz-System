@@ -1,0 +1,31 @@
+CREATE DATABASE quiz_db;
+USE quiz_db;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(50)
+);
+
+CREATE TABLE questions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question TEXT,
+    option1 VARCHAR(100),
+    option2 VARCHAR(100),
+    option3 VARCHAR(100),
+    option4 VARCHAR(100),
+    answer INT
+);
+
+SAMPLE DATA 
+
+
+INSERT INTO users (username, password) VALUES 
+('admin', 'admin123');
+
+INSERT INTO questions (question, option1, option2, option3, option4, answer) VALUES
+('What is the capital of France?', 'Berlin', 'London', 'Paris', 'Madrid', 3),
+('Which planet is known as the Red Planet?', 'Earth', 'Mars', 'Jupiter', 'Saturn', 2),
+('Which language is used to develop Android Apps?', 'Java', 'Python', 'C++', 'Swift', 1),
+('What is the result of 3 * 3?', '6', '9', '12', '3', 2),
+('HTML is used for?', 'Data Storage', 'Mobile Apps', 'Web Pages', 'Gaming', 3);
